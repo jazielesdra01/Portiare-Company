@@ -88,7 +88,7 @@ body {
 }
 
 .logo i {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--gold);
     background: rgba(212,175,55,0.12);
     width: 44px;
@@ -97,6 +97,39 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: rgba(212,175,55,0.12);
+    padding: 6px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text span {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.logo-image-large {
+    width: 60px;
+    height: 60px;
 }
 
 .nav-desktop {
