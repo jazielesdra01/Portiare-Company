@@ -1,27 +1,30 @@
 // WhatsApp Portiare - Alta Conversão
-document.getElementById('leadForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const nome = document.getElementById('nome').value;
-    const telefone = document.getElementById('telefone').value;
-    const servico = document.getElementById('servico').value || 'Consulta';
-    
-    const mensagem = `👑 *PORTIARE COMPANY - NOVA RESERVA* 👑%0A%0A` +
-                    `👤 *Nome:* ${nome}%0A` +
-                    `📱 *WhatsApp:* ${telefone}%0A` +
-                    `💎 *Serviço:* ${servico}%0A%0A` +
-                    `✨ *20% OFF primeira visita* ✨%0A` +
-                    `⚡ Agendar agora!`;
-    
-    // SEU NÚMERO AQUI 👇
-    window.open(`https://wa.me/5511987654321?text=${encodeURIComponent(mensagem)}`, '_blank');
-    
-    // Limpar form
-    this.reset();
-    
-    // Notificação sucesso
-    showSuccess('✅ WhatsApp aberto! Resposta em 2 minutos.');
-});
+const leadForm = document.getElementById('leadForm');
+if (leadForm) {
+    leadForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nome = document.getElementById('nome').value;
+        const telefone = document.getElementById('telefone').value;
+        const servico = document.getElementById('servico').value || 'Consulta';
+        
+        const mensagem = `👑 *PORTIARE COMPANY - NOVA RESERVA* 👑%0A%0A` +
+                        `👤 *Nome:* ${nome}%0A` +
+                        `📱 *WhatsApp:* ${telefone}%0A` +
+                        `💎 *Serviço:* ${servico}%0A%0A` +
+                        `✨ *20% OFF primeira visita* ✨%0A` +
+                        `⚡ Agendar agora!`;
+        
+        // SEU NÚMERO AQUI 👇
+        window.open(`https://wa.me/5511987654321?text=${encodeURIComponent(mensagem)}`, '_blank');
+        
+        // Limpar form
+        this.reset();
+        
+        // Notificação sucesso
+        showSuccess('✅ WhatsApp aberto! Resposta em 2 minutos.');
+    });
+}
 
 // Notificação estilo Bling
 function showSuccess(msg) {
