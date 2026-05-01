@@ -10,8 +10,8 @@
 ### Steps to Complete:
 
 - [x] 1. Analyze existing project files
-- [ ] 2. Enhance CSS with advanced animations
-- [ ] 3. Enhance JavaScript with interactive features
+- [x] 2. Enhance CSS with advanced animations
+- [x] 3. Enhance JavaScript with interactive features
 - [ ] 4. Test the website
 
 ### CSS Enhancements:
