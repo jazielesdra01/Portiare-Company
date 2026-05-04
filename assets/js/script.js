@@ -122,15 +122,15 @@ function initForm() {
         e.preventDefault();
 
         const nome = document.getElementById('nome').value;
-        const telefone = document.getElementById('telefone').value;
+        const telefone = document.getElementById('telefone').value.replace(/\D/g, '');
         const servico = document.getElementById('servico').value || 'Consulta';
 
-        const mensagem = `👑 *PORTIARE COMPANY - NOVA RESERVA* 👑%0A%0A` +
-                        `👤 *Nome:* ${nome}%0A` +
-                        `📱 *WhatsApp:* ${telefone}%0A` +
-                        `💎 *Serviço:* ${servico}%0A%0A` +
-                        `✨ *20% OFF primeira visita* ✨%0A` +
-                        `⚡ Agendar agora!`;
+        const mensagem = `👑 *PORTIARE COMPANY - NOVA RESERVA* 👑\n\n` +
+                        `👤 *Nome:* ${nome}\n` +
+                        `📱 *Celular:* ${telefone}\n` +
+                        `💎 *Serviço:* ${servico}\n\n` +
+                        `✨ *20% OFF primeira visita* ✨\n` +
+                        `⚡ Entre em contato!`;
 
         window.open(`https://wa.me/5511987654321?text=${encodeURIComponent(mensagem)}`, '_blank');
         this.reset();
